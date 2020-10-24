@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="counter"></p>
+{% endblock content %}
+
+{% block scripts %}
+{{super()}}
+<script src="/static/js/countdown.js"></script>
+{% endblock scripts %}
