@@ -15,7 +15,18 @@ function startCountdown(finalDateTime) {
   }, 500);
 };
 
+function getTimestamp() {
+  let ajaxParams = {
+    method: "GET",
+    dataType: "json"
+  }
+  let jqxhr = $.ajax("/api/timestamp", ajaxParams);
+  jqxhr.done(function (data) {
+    millis = data.timestamp * 1000;
+    startCountdown(millis);
+  });
+};
 
 $(document).ready(function () {
-  startCountdown(1613568745 * 1000)
+  getTimestamp();
 });
