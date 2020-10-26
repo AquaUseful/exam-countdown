@@ -1,7 +1,6 @@
 import quart
 import datetime
 import os
-from app import config
 try:
     from app import config
 except ImportError:
