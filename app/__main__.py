@@ -4,7 +4,6 @@ import sys
 import hypercorn
 import os
 from app import app
-from app.utils import blueprints
 try:
     from app import config
 except ImportError:
@@ -21,8 +20,6 @@ async def shutdown():
 def signal_handler():
     shutdown_event.set()
 
-
-asyncio.ensure_future(blueprints.register_blueprints())
 
 hypercorn_cfg = hypercorn.Config()
 try:
