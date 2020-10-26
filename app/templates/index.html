@@ -3,8 +3,13 @@
 {% block content %}
 <div class="container-fluid bg-dark text-white h-100">
     <div class="row h-100 justify-content-center align-items-center d-flex flex-column">
-        <h1 class="row display-3">До ЕГЭ:</h1>
-        <h1 class="row counter display-4"></h1>
+        <h1 class="display-3">До ЕГЭ:</h1>
+        <div class="d-flex flex-wrap justify-content-center">
+            <h1 class="display-4 counter-days mx-2"></h1>
+            <h1 class="display-4 counter-hours mx-2"></h1>
+            <h1 class="display-4 counter-minutes mx-2"></h1>
+            <h1 class="display-4 counter-seconds mx-2"></h1>
+        </div>
     </div>
 </div>
 {% endblock content %}
