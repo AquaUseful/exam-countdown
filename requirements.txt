@@ -9,7 +9,7 @@ hyperframe
 itsdangerous
 Jinja2
 MarkupSafe
-priority0
+priority
 Quart
 toml
 Werkzeug
