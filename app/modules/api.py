@@ -17,11 +17,11 @@ async def calc_exam_timestamp() -> float:
         exam_min = config.EXAM_MIN
         timedelta = config.TIMEDELTA
     except NameError:
-        exam_month = os.environ["EXAM_MONTH"]
-        exam_day = os.environ["EXAM_DAY"]
-        exam_hour = os.environ["EXAM_HOUR"]
-        exam_min = os.environ["EXAM_MIN"]
-        timedelta = os.environ["TIMEDELTA"]
+        exam_month = int(os.environ["EXAM_MONTH"])
+        exam_day = int(os.environ["EXAM_DAY"])
+        exam_hour = int(os.environ["EXAM_HOUR"])
+        exam_min = int(os.environ["EXAM_MIN"])
+        timedelta = int(os.environ["TIMEDELTA"])
     tzinfo = datetime.timezone(datetime.timedelta(hours=timedelta))
     curr_datetime = datetime.datetime.now(tz=tzinfo)
     curr_year = curr_datetime.year
